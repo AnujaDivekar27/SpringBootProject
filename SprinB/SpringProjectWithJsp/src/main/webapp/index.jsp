@@ -7,6 +7,7 @@
 <title>Index Page</title>
 </head>
 <body>
-<h1>Index Page Here</h1>
+<h1>index page called</h1>
+
 </body>
 </html>

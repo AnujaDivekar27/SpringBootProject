@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HomeController {
 
-	@RequestMapping("/home")
+	@RequestMapping("/")
 	public String getIndexPage()
 	{
-		System.out.println("Calling index page");
+		System.out.println("Request Handler Method Called....");
 		return "index";
 	}
 }

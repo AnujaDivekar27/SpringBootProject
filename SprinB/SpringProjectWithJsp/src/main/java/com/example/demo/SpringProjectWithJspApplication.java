@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages ={"com.example.demo.controller"})
 public class SpringProjectWithJspApplication {
 
 	public static void main(String[] args) {
