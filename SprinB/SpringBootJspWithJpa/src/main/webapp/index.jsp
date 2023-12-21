@@ -7,6 +7,8 @@
 <title>Index Page</title>
 </head>
 <body>
-<h1>Index Page Called!!!!</h1>
+<h1>Index Page Called...</h1>
+<a href="register.jsp">Register Here</a>
+<a href="allstudentdata.jsp">Shows All Student</a>
 </body>
 </html>
