@@ -8,6 +8,5 @@ import com.example.demo.entity.Student1;
 @Repository
 public interface Student1Repository extends CrudRepository<Student1, Integer> 
 {
-
-	//no need to create dao class 
+  //no need to create dao interface nd its implemented class 
 }
