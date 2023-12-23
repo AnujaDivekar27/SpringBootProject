@@ -13,5 +13,7 @@ public interface Student1Service {
 	
 	public List<Student1> getAllStudent1();
 	
-	//public Student1 updateStudent1()
+	public void updateStudent1 (Student1 s);
+	
+	public void deleteStudent(int id);
 }

@@ -58,4 +58,25 @@ public class Student1ServiceImpl implements Student1Service {
 	   return slist;
 	}
 
+	@Override
+	public void updateStudent1(Student1 s) {
+		
+	   System.out.println("Updated Student1 in service layer"+" "+s);
+	   student1Repository.save(s);
+	   
+	   //save():update student1 when id present
+	   //otherwise save student1 in database
+		
+	}
+
+	@Override
+	public void deleteStudent(int id) {
+	
+			System.out.println("student1 id :"+" "+id);
+			student1Repository.deleteById(id);
+				
+		
+		
+	}
+
 }

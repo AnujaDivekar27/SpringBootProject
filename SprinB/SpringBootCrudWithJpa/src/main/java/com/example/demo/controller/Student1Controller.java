@@ -3,9 +3,11 @@ package com.example.demo.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -62,7 +64,7 @@ public class Student1Controller {
 			System.out.println(e.getMessage());
 		}
 		
-		return new Student1("student id not found");
+		return new Student1();
 	}
 	
 	@GetMapping(value="/getall")
@@ -72,4 +74,24 @@ public class Student1Controller {
 		return stud ;
 		
 	}
+	
+	@PutMapping(value="/up")
+	public String updateStudent(@RequestBody Student1 student)
+	{
+		student1Service.updateStudent1(student);
+		return "update student1 successfully";
+		
+	}
+	
+	@DeleteMapping(value="/del/{id}")
+	public String deleteStudent(@PathVariable int id)
+	{
+		student1Service.deleteStudent(id);
+		return "delete student1 successfully";
+		
+	}
 }
+
+
+
+

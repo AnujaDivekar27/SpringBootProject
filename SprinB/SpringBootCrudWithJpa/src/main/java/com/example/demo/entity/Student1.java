@@ -21,12 +21,12 @@ public class Student1 {
 
 	private String pass;
 	
-	private String msg;
+	/*private String msg;
 	
 	public Student1(String msg)
 	{
 		this.msg=msg;
-	}
+	}*/
 	
 	@Transient
 	private String errorMsg;
@@ -71,14 +71,6 @@ public class Student1 {
 		this.pass = pass;
 	}
 
-	public String getMsg() {
-		return msg;
-	}
-
-	public void setMsg(String msg) {
-		this.msg = msg;
-	}
-
 	public String getErrorMsg() {
 		return errorMsg;
 	}
@@ -90,9 +82,12 @@ public class Student1 {
 	@Override
 	public String toString() {
 		return "Student1 [id=" + id + ", name=" + name + ", address=" + address + ", uname=" + uname + ", pass=" + pass
-				+ ", msg=" + msg + ", errorMsg=" + errorMsg + "]";
+				+ ", errorMsg=" + errorMsg + "]";
 	}
+	}
+
+    
 
 	
     
-}
+
