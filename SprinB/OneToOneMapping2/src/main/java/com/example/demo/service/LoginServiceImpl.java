@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.entity.Login;
+import com.example.demo.exception.InvalidUserException;
 import com.example.demo.repo.LoginRepository;
 
 @Service
@@ -22,15 +23,22 @@ public class LoginServiceImpl implements LoginService
 	}
 
 	@Override
-	public Login LoginCheck(String uname, String pass) {
+	public Login LoginCheck(String uname, String pass) throws InvalidUserException 
+	{
 		// TODO Auto-generated method stub
 		System.out.println("Login credentials in login controller");
 		System.out.println("uname:" + " " + uname + " " + "pass:" + " " + pass);
 
 		Login login = loginRepo.findByUnameAndPass(uname, pass);
-
-		return login;
-
+        if(login!=null)
+        {
+        	return login;	
+        }
+        else
+        {
+        	System.out.println("Check here");
+        	throw new InvalidUserException("invalid username and password");
+        }
 		
 	}
 	
