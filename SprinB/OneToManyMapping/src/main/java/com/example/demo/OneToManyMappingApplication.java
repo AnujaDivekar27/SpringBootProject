@@ -1,0 +1,16 @@
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class OneToManyMappingApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(OneToManyMappingApplication.class, args);
+	
+	 System.out.println("One To Many Mapping........");
+	
+	}
+
+}

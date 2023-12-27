@@ -36,6 +36,7 @@ public class LoginServiceImpl implements LoginService
         }
         else
         {
+        	//when uname nd pass are different for user from db
         	System.out.println("Check here");
         	throw new InvalidUserException("invalid username and password");
         }

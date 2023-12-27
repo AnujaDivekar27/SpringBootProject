@@ -1,0 +1,40 @@
+package com.example.demo.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.entity.Product;
+import com.example.demo.service.ProductService;
+
+@RestController
+public class ProductController {
+
+	@Autowired 
+	private ProductService productService;
+	
+	@PostMapping(value="/saveProduct")
+	public String saveProduct(@RequestBody Product product)
+	{
+		System.out.println("Product in Controller:"+" "+product);
+		productService.addProduct(product);
+		
+		return "product added successfully";
+		
+	}
+	
+	@GetMapping(value="/getAllProducts")
+	public List<Product> getProducts()
+	{
+	
+		List<Product>products=productService.getAllProducts();
+		
+		return products;
+		
+	}
+	
+}
