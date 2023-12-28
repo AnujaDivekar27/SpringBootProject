@@ -29,6 +29,7 @@ public class AccountController {
 	  //Throws NullPointerException:for wrong email/acname
 	  //If Exception not handled then  error will show on postman nd terminate programe
       //"com.example.demo.exception.AccountNotFound: invalid account name and email	  
+	  
 	  return account;
     }
 }
