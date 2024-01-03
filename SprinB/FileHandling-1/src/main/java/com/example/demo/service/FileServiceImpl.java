@@ -22,6 +22,7 @@ public class FileServiceImpl implements FileService {
 		
 		FileData filedata=new FileData();
 		//filedata.setFid(123);
+		
 		filedata.setFname(file.getOriginalFilename());
 		filedata.setFtype(file.getContentType());
 		try {
