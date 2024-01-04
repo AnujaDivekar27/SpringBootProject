@@ -1,6 +1,8 @@
 package com.example.demo.service;
 
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.NoSuchElementException;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +15,7 @@ import com.example.demo.entity.FileData;
 @Service
 public class FileServiceImpl implements FileService {
 
+	public static final String UPLOAD_DIR="C:\\Users\\Alka\\Desktop";
 	@Autowired
 	private FileRepository fileRepository;
 	
@@ -47,6 +50,8 @@ public class FileServiceImpl implements FileService {
 	       //findById(id)->return Optional	
 	      //id is not present in FileData table exception occures
 	    	FileData fileData=fileRepository.findById(id).get();
+	    	
+	    	Path path=Paths.get(UPLOAD_DIR);
 		  return fileData;
 		}
 		catch(NoSuchElementException e)
