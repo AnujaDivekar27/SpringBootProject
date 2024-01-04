@@ -17,6 +17,7 @@ public class EMailController {
 	{
 		SimpleMailMessage mailMessage=new SimpleMailMessage();
 		//used for simple text mail
+		
 		mailMessage.setTo("divekar.anuja27@gmail.com");
 		mailMessage.setSubject("mail sending code");
 		mailMessage.setText("for education purpose");
